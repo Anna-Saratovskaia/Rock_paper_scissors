@@ -2,8 +2,8 @@ let btnRock = document.querySelector('.rock');
 let btnPaper = document.querySelector('.paper');
 let btnScissors = document.querySelector('.scissors');
 let result = document.createElement('p');
-let resultContainer = document.querySelector('.result')
-
+let resultContainer = document.querySelector('.result');
+let btnPlay = document.querySelector('.play');
 
 
 function getComputerChoice() {
