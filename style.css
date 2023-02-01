@@ -1,3 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background-image:url('river-rock-stone-1000x1000.webp');
+color: white;
+}
+
+.header {
+  height: 100px;
+  background-color: #888;
+  display: flex;
+  margin: 20px 0;
+
+}
+
 h1 {
-  color: blueviolet;
+  font-size: 70px;
+padding: 20px 0;
+margin: 0 auto;
+
+}
+
+.play {
+  display: flex;
+}
+
+.play-btn {
+  width: 150px;
+  height: 75px;
+  font-size: 40px;
+  background-color:blue;
+  color: aquamarine;
+  border-radius: 10px;
+  border: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.round-info {
+  display:flex;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 50px;
+}
+
+.current {
+  height: 250px;
+  background-color: #999;
+  padding: 20px;
+  border-radius: 9px;
+}
+.score {
+  display: flex;
+  justify-content: space-around;
+}
+span {
+  font-size: 30px;
+}
+
+.result,.choose {
+  display: flex;
+  height: 60px;
+  margin: 20px 0;
+  background-color: #999;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: center
+}
+
+.btns {
+  width: 130px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: #555;
+  margin: 10px 20px;
 }

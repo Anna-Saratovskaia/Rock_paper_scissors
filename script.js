@@ -1,11 +1,16 @@
 let btnRock = document.querySelector('.rock');
 let btnPaper = document.querySelector('.paper');
 let btnScissors = document.querySelector('.scissors');
-let result = document.createElement('p');
-let resultContainer = document.querySelector('.result');
+let result = document.querySelector('.result h2');
 let btnPlay = document.querySelector('.play');
+let currentRound = document.querySelector('.current-round');
+let computerScore = document.querySelector('.computer-score');
+let playerScore = document.querySelector('.player-score')
 
 
+function play () {
+    
+}
 function getComputerChoice() {
     let random = Math.trunc(Math.random() * 10);
     let computerChoice;
@@ -30,38 +35,34 @@ function getPlayerCoice() {
 btnPaper.addEventListener('click', function() {
     let computerSelection = getComputerChoice();
     if (computerSelection === 'paper') {
-        result.textContent = `Draw! You both chosen ${computerSelection}.`
+        result.textContent = `The result of this round is: Draw! You both chosen ${computerSelection}.`
     } else if (computerSelection === 'rock') {
-        result.textContent = `You win! Paper beats rock.`
+        result.textContent = `The result of this round is: You win! Paper beats rock.`
     } else if(computerSelection === 'scissors') {
-        result.textContent = `You lose! Scissors beat paper`
+        result.textContent = `The result of this round is: You lose! Scissors beat paper`
     }
-    resultContainer.appendChild(result)
 })
 
 btnRock.addEventListener('click', function() {
     let computerSelection = getComputerChoice();
     if (computerSelection === 'rock') {
-        result.textContent = `Draw! You both chosen rock.`
+        result.textContent = `The result of this round is: Draw! You both chosen rock.`
     } else if (computerSelection === 'paper') {
-        result.textContent = `You lose! Paper beats rock`
+        result.textContent = `The result of this round is: You lose! Paper beats rock`
     } else if (computerSelection === 'scissors') {
-        result.textContent = `You win! Rock beats scissors.`
+        result.textContent = `The result of this round is: You win! Rock beats scissors.`
     }
-    resultContainer.appendChild(result);
 })
 
 btnScissors.addEventListener('click', function () {
     let computerSelection = getComputerChoice();
     if (computerSelection === 'scissors') {
-        result.textContent = `Draw! You both chosen ${computerSelection}.`
+        result.textContent = `The result of this round is: Draw! You both chosen ${computerSelection}.`
     } else if (computerSelection === 'rock') {
-        result.textContent = `You lose! Rock beats scissors`
+        result.textContent = `The result of this round is: You lose! Rock beats scissors`
     }  else if (computerSelection === 'paper') {
-        result.textContent = `You win! Scissors beat paper.`
+        result.textContent = `The result of this round is: You win! Scissors beat paper.`
     } 
-    resultContainer.appendChild(result)
-
 })
 
 
