@@ -12,7 +12,7 @@
       <h1>Rock, paper, scissors</h1>
     </div>
     <div class="play">
-      <button class="play-btn">Play!</button>
+      <button class="play-btn">New Game</button>
 
    </div>
 
@@ -21,9 +21,9 @@
       <h2 class="player-choice">What do you choose?</h2>
     </div>
     <div class="btns-container">
-      <button class="btns rock">Rock</button>
-      <button class="btns paper">Paper</button>
-      <button class="btns scissors">Scissors</button>
+      <button class="btns" data-player-choice="rock">Rock</button>
+      <button class="btns" data-player-choice="paper" >Paper</button>
+      <button class="btns" data-player-choice="scissors" >Scissors</button>
     </div>
   </div>
 
@@ -33,13 +33,15 @@
   </div>
     <div class="round-info">
       <div class="current current-round">
-        <h3>Current round</h3>
+        <h3>Current round
+          <p>0</p>
+        </h3>
       </div>
-      <div class="current current-score">
+      <div class="current">
         <h3>Current score</h3>
-        <div class="score">
-          <span class="computer-score">Computer:</span>
-          <span class="player-score">Player:</span>
+        <div class="current-score">
+          <p >Computer:<span class="computer-score">0</span></p>
+          <p>Player:<span class="player-score">0</span></p>
         </div>
       
       </div>

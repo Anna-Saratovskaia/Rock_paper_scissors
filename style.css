@@ -39,6 +39,30 @@ margin: 0 auto;
   text-align: center;
 }
 
+.play-btn:hover{
+  width: 150px;
+  height: 75px;
+  font-size: 40px;
+  color: blue;
+  background-color: aquamarine;
+  border-radius: 10px;
+  border: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.play-btn:active {
+  width: 150px;
+  height: 75px;
+  font-size: 40px;
+  background-color:blue;
+  color: aquamarine;
+  border-radius: 10px;
+  border: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .round-info {
   display:flex;
   text-align: center;
@@ -56,9 +80,7 @@ margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
-span {
-  font-size: 30px;
-}
+
 
 .result,.choose {
   display: flex;
@@ -72,10 +94,26 @@ h2 {
   margin: 0 auto;
 }
 
+h3 p {
+  font-size: 100px;
+margin: 0 auto;
+}
+
 .btns-container {
   display: flex;
   justify-content: center
 }
+
+.current-score p {
+  font-size: 50px;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.computer-score,.player-score {
+  margin-left: 20px
+}
+
 
 .btns {
   width: 130px;
@@ -86,4 +124,5 @@ h2 {
   color: white;
   background-color: #555;
   margin: 10px 20px;
+  border: solid 2px black;
 }
