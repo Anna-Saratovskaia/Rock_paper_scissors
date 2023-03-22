@@ -22,6 +22,8 @@ function  init () {
     currentRoundEl.textContent = `0`;
     playerScoreEl.textContent = `0`;
     computerScoreEl.textContent = `${computerScore.toString()}`
+    computerChoiceEl.textContent = "?";
+
 }
 
 init()
@@ -35,7 +37,7 @@ let play = function(event){
     if(currentRound >= 5) playing = false;
     
     currentRoundEl.textContent = `${currentRound.toString()}`
-    computerChoiceEl.textContent = `${computerChoice}`
+    computerChoiceEl.textContent = `${computerChoice}`.slice(0, 1).toUpperCase() + `${computerChoice}`.slice(1)
 
     // if(currentRound >= 5) {
     //     btnsEl.forEach(btn => btn.removeEventListener('click',  play))
