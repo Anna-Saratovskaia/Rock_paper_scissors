@@ -15,21 +15,28 @@
       <button class="play-btn">New Game</button>
 
    </div>
+   
 
-   <div class="player-selection">
-    <div class="choose">
-      <h2 class="player-choice">What do you choose?</h2>
-    </div>
-    <div class="btns-container">
-      <button class="btns" data-player-choice="rock">Rock</button>
-      <button class="btns" data-player-choice="paper" >Paper</button>
-      <button class="btns" data-player-choice="scissors" >Scissors</button>
-    </div>
+   <div class="players-selection">
+  
+      <div class="choice human">
+        <h2 class="player-choice">Your choice:</h2>
+        <div class="btns-container">
+          <button class="btns" data-player-choice="rock">Rock</button>
+          <button class="btns" data-player-choice="paper" >Paper</button>
+          <button class="btns" data-player-choice="scissors" >Scissors</button>
+        </div>
+      </div>
+      <div class="choice computer">
+        <img class="winner" src="win.png"/>
+        <h2 class="choose computers-choice">Computer's choice:</h2>
+        <p class="computer-choice">?</p>
+      </div>
   </div>
 
 
   <div class="result">
-    <h2>The result of this round is:</h2>
+    <p>The result of this round is:</p>
   </div>
     <div class="round-info">
       <div class="current current-round">

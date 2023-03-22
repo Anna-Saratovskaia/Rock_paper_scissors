@@ -1,19 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: serif;
 }
+
+/* 
+#2C3333
+#2E4F4F
+#0E8388
+#CBE4DE */
+
 
 body {
 background-image:url('river-rock-stone-1000x1000.webp');
-color: white;
+color: #2C3333;
 }
 
 .header {
   height: 100px;
-  background-color: #888;
+  background-color: #0E8388;
   display: flex;
   margin: 20px 0;
-
+  text-shadow: 1px 0 1px #CBE4DE,
+  0 1px 1px #CBE4DE,
+  -1px 0 1px #CBE4DE,
+  0 -1px 1px #CBE4DE;
 }
 
 h1 {
@@ -28,11 +39,10 @@ margin: 0 auto;
 }
 
 .play-btn {
-  width: 150px;
-  height: 75px;
+  width: 170px;
   font-size: 40px;
-  background-color:blue;
-  color: aquamarine;
+  background-color: #2C3333;
+  color: #CBE4DE;
   border-radius: 10px;
   border: none;
   margin: 20px auto;
@@ -40,11 +50,10 @@ margin: 0 auto;
 }
 
 .play-btn:hover{
-  width: 150px;
-  height: 75px;
+  width: 170px;
   font-size: 40px;
-  color: blue;
-  background-color: aquamarine;
+  color: #2C3333;
+  background-color: #CBE4DE;
   border-radius: 10px;
   border: none;
   margin: 20px auto;
@@ -53,10 +62,9 @@ margin: 0 auto;
 
 .play-btn:active {
   width: 150px;
-  height: 75px;
   font-size: 40px;
-  background-color:blue;
-  color: aquamarine;
+  background-color:#2C3333;
+  color: #CBE4DE;
   border-radius: 10px;
   border: none;
   margin: 20px auto;
@@ -72,7 +80,7 @@ margin: 0 auto;
 
 .current {
   height: 250px;
-  background-color: #999;
+  background-color: rgb(203, 228, 222, 0.5) ;
   padding: 20px;
   border-radius: 9px;
 }
@@ -82,12 +90,6 @@ margin: 0 auto;
 }
 
 
-.result,.choose {
-  display: flex;
-  height: 60px;
-  margin: 20px 0;
-  background-color: #999;
-}
 
 h2 {
   font-size: 50px;
@@ -96,14 +98,69 @@ h2 {
 
 h3 p {
   font-size: 100px;
-margin: 0 auto;
+  margin: 0 auto;
 }
+
+/*choices section*/
+
+.players-selection {
+  display:flex;
+  justify-content: space-around;
+  padding: 0 3rem;
+}
+
+.players-selection h2 {
+  text-align: center;
+  background-color:rgba(14, 132, 136, 0.1);
+  color: #CBE4DE;
+  text-shadow: 1px 0 1px rgb(44, 51, 51),
+  0 1px 1px rgb(44, 51, 51),
+  -1px 0 1px rgb(44, 51, 51),
+  0 -1px 1px rgb(44, 51, 51);
+}
+
+.choice {
+  border: 2px solid  #CBE4DE;
+  border-radius: 9px;
+  background-color:rgba(14, 132, 136, 0.1);
+  min-width: 40%;
+}
+
 
 .btns-container {
   display: flex;
   justify-content: center
 }
 
+.btns,.computer-choice {
+  width: 130px;
+  margin: 30px 20px;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 30px;
+  background-color: #2C3333;
+  color: #CBE4DE;
+  border: solid 2px #CBE4DE;;
+}
+
+.computer-choice {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.choices-container {
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.computer-choice-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/*score*/
 .current-score p {
   font-size: 50px;
   text-align: left;
@@ -113,16 +170,24 @@ margin: 0 auto;
 .computer-score,.player-score {
   margin-left: 20px
 }
+.result {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0;
+  background-color:rgb(203, 228, 222, 0.5);
+  border-radius: 9px;
+  border: 2px solid #CBE4DE;
+}
 
-
-.btns {
-  width: 130px;
-  height: 60px;
-  border: none;
-  border-radius: 10px;
-  font-size: 30px;
-  color: white;
-  background-color: #555;
-  margin: 10px 20px;
-  border: solid 2px black;
+.result p, .current h3 {
+    text-shadow: 1px 0 1px #CBE4DE,
+  0 1px 1px #CBE4DE,
+  -1px 0 1px #CBE4DE,
+  0 -1px 1px #CBE4DE;
+  font-size: 50px;
+  font-weight: 700;
+}
+.winner {
+  display: none;
+  width: 3rem
 }
