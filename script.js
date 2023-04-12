@@ -33,52 +33,28 @@ let play = function(event){
     if (!playing) return;
     let computerChoice = getComputerChoice()
     let playerChoice = btn.dataset.playerChoice;
+    console.log(typeof playerChoice)
     currentRound++;
     if(currentRound >= 5) playing = false;
     
     currentRoundEl.textContent = `${currentRound.toString()}`
-    computerChoiceEl.textContent = `${computerChoice}`.slice(0, 1).toUpperCase() + `${computerChoice}`.slice(1)
-
-    // if(currentRound >= 5) {
-    //     btnsEl.forEach(btn => btn.removeEventListener('click',  play))
-    // }
-           
+    computerChoiceEl.textContent = `${computerChoice}`.slice(0, 1).toUpperCase() + `${computerChoice}`.slice(1);
+    let playerChoiceText = `${playerChoice}`.slice(0,1).toUpperCase() +`${playerChoice}`.slice(1)
+            
     if(computerChoice === playerChoice){
-        result.textContent = ` draw. You both threw ${computerChoice}`
+        result.textContent = ` draw. You both threw ${computerChoice}.`
         
-    }  else if (computerChoice === 'rock' && playerChoice === 'paper') {
-        result.textContent = ` You win! Paper beats rock.`; 
-        
-        playerScore++
-        playerScoreEl.textContent = `${playerScore.toString()}`
-    } else if(computerChoice === 'scissors' && playerChoice === 'paper') {
-        result.textContent = ` You lose! Scissors beat paper`;
-        
-        computerScore++;
-        computerScoreEl.textContent = `${computerScore.toString()}`
-    } else if (computerChoice === 'rock' && playerChoice === 'scissors') {
-        result.textContent = ` You lose! Rock beats scissors`;
-        
-        computerScore++;
-        computerScoreEl.textContent = `${computerScore.toString()}`
-    }else if(computerChoice === 'paper' && playerChoice === 'scissors') {
-        result.textContent = ` You win! Scissors beats paper`;
-        resultParent.append(result)
-        
-        playerScore++
-        playerScoreEl.textContent = `${playerScore.toString()}`
-    } else if (computerChoice === 'scissors' && playerChoice === 'rock') {
-        result.textContent = ' You win! Rock beats scissors';
+    }  else if (computerChoice === 'rock' && playerChoice === 'paper' || computerChoice === 'paper' && playerChoice === 'scissors' || computerChoice === 'scissors' && playerChoice === 'rock') {
+        result.textContent = ` You win! ${playerChoiceText} beat ${computerChoice}.`; 
         
         playerScore++
         playerScoreEl.textContent = `${playerScore.toString()}`
     } else {
-        result.textContent = ' You lose! Paper beats rock';
+        result.textContent = ` You lose! ${computerChoiceEl.textContent} beat ${playerChoice}.`;
         
         computerScore++;
         computerScoreEl.textContent = `${computerScore.toString()}`
-    } 
-    
+    }     
 }
 
 btnsEl.forEach(btn => {
